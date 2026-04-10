@@ -70,13 +70,14 @@ Mỗi nhóm chọn một domain và chuẩn bị bộ tài liệu:
 
 Ghi vào bảng:
 
-| # | Tên tài liệu | Nguồn | Số ký tự | Metadata đã gán |
-|---|--------------|-------|----------|-----------------|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
+| # | Query | Gold Answer | Chunk nào chứa thông tin? |
+|---|-------|-------------|--------------------------|
+| 1 | Tiêu chuẩn về trình độ đào tạo, bồi dưỡng đối với giáo viên hạng I | Có bằng thạc sĩ trở lên thuộc ngành đào tạo giáo viên hoặc có bằng thạc sĩ trở lên chuyên ngành phù hợp với môn học giảng dạy và có chứng chỉ nghiệp vụ sư phạm đối với giáo viên trung học phổ thông. Có chứng chỉ bồi dưỡng chuẩn nghề nghiệp giáo viên cơ sở giáo dục thường xuyên. | **Điều 6, khoản 3 (Hạng I)** — `thong-tu-23-2026-tt-bgddt-quy-dinh-ma-so-chuan-nghe-nghiep-va-luong-giao-vien.md` |
+| 2 | Xử lý vi phạm QUY ĐỊNH VỀ CÔNG TÁC CHÍNH TRỊ, TƯ TƯỞNG TRONG ĐẢNG như thế nào? | 1. Tổ chức đảng, cán bộ, đảng viên vi phạm Quy định này, tùy theo tính chất, mức độ và hậu quả phải bị xem xét, xử lý kỷ luật theo quy định của Đảng và pháp luật của Nhà nước. 2. Người đứng đầu cấp ủy, tổ chức đảng, cơ quan, đơn vị nếu để xảy ra vi phạm nghiêm trọng, kéo dài trong lĩnh vực công tác chính trị, tư tưởng phải chịu trách nhiệm hoặc trách nhiệm liên đới và bị xem xét xử lý theo quy định của Đảng. | **Điều 14 (Xử lý vi phạm)** — `QUY ĐỊNH VỀ CÔNG TÁC CHÍNH TRỊ, TƯ TƯỞNG TRONG ĐẢNG.md` |
+| 3 | Theo Thông tư 05/2026/TT-BKHCN, khi hệ thống trí tuệ nhân tạo bị tấn công đầu độc dữ liệu, tổ chức/cá nhân cần thực hiện những biện pháp gì? | Bảo đảm an ninh của hệ thống trí tuệ nhân tạo: Tổ chức, cá nhân áp dụng biện pháp bảo vệ phù hợp để phòng ngừa, phát hiện, ngăn chặn và ứng phó với các hành vi xâm nhập, chiếm quyền điều khiển, đầu độc dữ liệu, đầu độc mô hình, tấn công đối nghịch, khai thác lỗ hổng, rò rỉ dữ liệu và lạm dụng hệ thống trí tuệ nhân tạo; bảo đảm tính bí mật, toàn vẹn và sẵn sàng của dữ liệu, mô hình, thuật toán và hạ tầng liên quan. | ⚠️ Tài liệu gốc "Thông tư 05/2026/TT-BKHCN" **không có trong data/**. Nội dung gần nhất: **Điều 14, khoản 1** — `luat-tri-tue-nhan-tạo-2025.txt` |
+| 4 | Những hành vi nào bị nghiêm cấm trong hoạt động trí tuệ nhân tạo theo Luật AI 2025? | Luật nghiêm cấm việc lợi dụng hệ thống AI để vi phạm pháp luật; sử dụng yếu tố giả mạo để lừa dối hoặc thao túng hành vi con người; lợi dụng điểm yếu của nhóm người dễ bị tổn thương; tạo ra nội dung giả mạo gây nguy hại đến an ninh quốc gia; và thu thập dữ liệu trái phép để phát triển hệ thống AI. | **Điều 7 (Các hành vi bị nghiêm cấm)** — `luat-tri-tue-nhan-tạo-2025.txt` |
+| 5 | Theo Nghị định 129/2026/NĐ-CP, dự toán ngân sách hàng năm của các Cơ quan Việt Nam ở nước ngoài được lập bằng đồng tiền nào và căn cứ vào tỷ giá tại thời điểm nào? | Dự toán được lập bằng đồng Việt Nam quy đổi ra đô la Mỹ theo tỷ giá hạch toán tháng 6 năm hiện hành do Bộ Tài chính quy định. | **Điều 8, khoản 1 (Lập dự toán ngân sách)** — `nghi-dinh-129-2026-nd-cp-quan-ly-su-dung-ngan-sach-nha-nuoc-cho-hoat-dong-doi-ngoai.md` |
+| 6 | Cơ quan nhà nước sử dụng hệ thống trí tuệ nhân tạo có được để hệ thống tự động đưa ra quyết định cuối cùng không? | Bảo đảm quyết định cuối cùng thuộc thẩm quyền của con người theo quy định của pháp luật; hệ thống trí tuệ nhân tạo không thay thế trách nhiệm của người ra quyết định. | **Điều 27, khoản 2 (Trách nhiệm đạo đức khi ứng dụng AI trong QLNN)** — `luat-tri-tue-nhan-tạo-2025.txt` |
 
 **Step 3 — Thiết kế metadata schema:** Mỗi tài liệu cần ít nhất 2 trường metadata hữu ích (e.g., `category`, `date`, `source`, `language`, `difficulty`).
 
