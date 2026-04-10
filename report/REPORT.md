@@ -6,9 +6,9 @@
 
 ---
 
-## Section 1 - Warm-up
+## Section 1 — Warm-up
 
-### Exercise 1.1 - Cosine Similarity in Plain Language
+### Exercise 1.1 — Cosine Similarity in Plain Language
 
 **High cosine similarity nghĩa là gì?**
 
