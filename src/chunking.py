@@ -167,6 +167,47 @@ def compute_similarity(vec_a: list[float], vec_b: list[float]) -> float:
     return dot_product / (magnitude_a * magnitude_b)
 
 
+class LegalArticleChunker:
+    """
+    Custom chunking strategy optimised for Vietnamese legal documents.
+
+    Design rationale:
+        Legal documents are structured around numbered Articles (Điều X.).
+        Splitting at article boundaries keeps each legal provision as one
+        self-contained chunk, which maximises retrieval precision for
+        question-answering on laws, decrees and circulars.
+
+    Strategy:
+        1. Split the full text on article boundary patterns
+           (e.g. "Điều 1.", "Điều 12.", …).
+        2. If a single article is still longer than max_article_chars,
+           fall back to RecursiveChunker to break it further.
+        3. Strip leading/trailing whitespace from every chunk.
+    """
+
+    ARTICLE_PATTERN = re.compile(r"(?=\n\s*Điều\s+\d+[\.\.])")
+
+    def __init__(self, max_article_chars: int = 1500) -> None:
+        self.max_article_chars = max_article_chars
+        self._fallback = RecursiveChunker(chunk_size=max_article_chars)
+
+    def chunk(self, text: str) -> list[str]:
+        if not text or not text.strip():
+            return []
+
+        raw_parts = self.ARTICLE_PATTERN.split(text)
+        chunks: list[str] = []
+        for part in raw_parts:
+            part = part.strip()
+            if not part:
+                continue
+            if len(part) <= self.max_article_chars:
+                chunks.append(part)
+            else:
+                chunks.extend(self._fallback.chunk(part))
+        return chunks
+
+
 class ChunkingStrategyComparator:
     """Run all built-in chunking strategies and compare their results."""
 
